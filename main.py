@@ -17,7 +17,11 @@ async def root():
 
 @app.get("/hello/{name}")
 async def say_hello(name: str):
-    return {"message": f"Awesome cloud developer dff9 says hello {name}"}
+    return {"message": f"Awesome cloud developer dff9 says hello and welcome to the class {name}"}
+
+@app.get("/hello_class/{class_of}")
+async def say_hello_to_class(class_of: str):
+    return {"message": f"Hello class of {class_of}"}
 
 
 @app.get("/hello_text/{name}")
